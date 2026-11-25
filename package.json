@@ -1,0 +1,25 @@
+{
+  "name": "grafcet-editor",
+  "displayName": "Grafcet Editor (style Control Expert SFC)",
+  "description": "Éditeur graphique de Grafcet (SFC) en grille : étapes, transitions, divergences ET/OU, renvois, actions, export Structured Text.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Programming Languages", "Other"],
+  "main": "./extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "grafcetEditor.editor",
+        "displayName": "Grafcet Editor",
+        "selector": [{ "filenamePattern": "*.grafcet.json" }],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      { "command": "grafcetEditor.new", "title": "Grafcet: Nouveau fichier grafcet" },
+      { "command": "grafcetEditor.exportST", "title": "Grafcet: Exporter en Structured Text" }
+    ]
+  }
+}

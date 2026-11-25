@@ -1,0 +1,38 @@
+body { margin: 0; font-family: var(--vscode-font-family); color: var(--vscode-foreground); background: var(--vscode-editor-background); }
+.bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px;
+  background: var(--vscode-editorWidget-background); border-bottom: 1px solid var(--vscode-panel-border); }
+.bar .sep { width: 1px; height: 26px; background: var(--vscode-panel-border); margin: 0 4px; }
+.bar .status { margin-left: auto; font-size: 12px; color: var(--vscode-descriptionForeground); }
+button { font: inherit; font-size: 12px; color: var(--vscode-button-secondaryForeground); background: var(--vscode-button-secondaryBackground);
+  border: 1px solid transparent; border-radius: 2px; padding: 3px 8px; cursor: pointer; }
+button:hover { background: var(--vscode-button-secondaryHoverBackground); }
+button:focus-visible, input:focus-visible { outline: 1px solid var(--vscode-focusBorder); }
+button.tool { display: flex; flex-direction: column; align-items: center; padding: 2px 6px; min-width: 56px; }
+button.tool svg { display: block; }
+button.tool span { font-size: 10px; opacity: .8; }
+button.primary { color: var(--vscode-button-foreground); background: var(--vscode-button-background); }
+button.primary:hover { background: var(--vscode-button-hoverBackground); }
+.canvas { position: relative; overflow: auto; padding: 8px 0 40px; }
+svg { display: block; }
+.edge { stroke: var(--vscode-editor-foreground); stroke-width: 2; fill: none; }
+.edge.thin { stroke-width: 1.5; }
+.edge.bad { stroke: var(--vscode-editorError-foreground); stroke-dasharray: 5 4; }
+.box { fill: var(--vscode-editor-background); stroke: var(--vscode-editor-foreground); stroke-width: 2; }
+.box.inner { stroke-width: 1.5; }
+.tbar { stroke: var(--vscode-editor-foreground); stroke-width: 4; }
+.bar2 { stroke: var(--vscode-editor-foreground); stroke-width: 3; }
+.jarrow { fill: var(--vscode-editor-foreground); }
+.abox { fill: var(--vscode-editor-background); stroke: var(--vscode-editor-foreground); stroke-width: 1.5; }
+.sname { fill: var(--vscode-editor-foreground); font-size: 13px; font-weight: 600; text-anchor: middle; font-family: var(--vscode-editor-font-family); }
+.cond { fill: var(--vscode-editor-foreground); font-size: 12px; font-family: var(--vscode-editor-font-family); }
+.cond.missing { fill: var(--vscode-editorWarning-foreground); }
+.tname { fill: var(--vscode-descriptionForeground); font-size: 11px; text-anchor: end; }
+.aq { fill: var(--vscode-editor-foreground); font-size: 11px; font-weight: 600; text-anchor: middle; }
+.an { fill: var(--vscode-editor-foreground); font-size: 11px; font-family: var(--vscode-editor-font-family); }
+.dot { fill: var(--vscode-editorLineNumber-foreground); opacity: .35; }
+.warn { fill: var(--vscode-editorError-foreground); }
+.hit { fill: transparent; cursor: cell; }
+.hit:hover { fill: var(--vscode-list-hoverBackground); }
+.selrect { fill: var(--vscode-editor-selectionBackground); stroke: var(--vscode-focusBorder); stroke-width: 1.5; pointer-events: none; opacity: .6; }
+.namebox { position: absolute; box-sizing: border-box; height: 22px; font: inherit; font-size: 12px; font-family: var(--vscode-editor-font-family);
+  color: var(--vscode-input-foreground); background: var(--vscode-input-background); border: 1px solid var(--vscode-focusBorder); padding: 0 4px; z-index: 3; }
